@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { CalendarDays, Filter, X } from "lucide-react"
 import { channels, regions, tracks, statuses } from "@/lib/mock-data"
 
-export function TopBar({ title }: { title: string }) {
+export function TopBar({ title, showFilters = false }: { title: string; showFilters?: boolean }) {
   const { filters, updateFilter, clearFilters, activeFilterCount } = useFilters()
 
   return (
@@ -16,7 +16,8 @@ export function TopBar({ title }: { title: string }) {
       <h1 className="text-lg font-semibold text-foreground">{title}</h1>
 
       <div className="flex items-center gap-3">
-        {/* Active filter chips */}
+        {/* Active filter chips - only shown when showFilters is true */}
+        {showFilters && (
         <div className="flex flex-wrap items-center gap-1.5">
           {filters.channels.map((c) => (
             <Badge
@@ -96,6 +97,7 @@ export function TopBar({ title }: { title: string }) {
             </Button>
           )}
         </div>
+        )}
 
         {/* Date range display */}
         <div className="flex items-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5 text-xs text-muted-foreground">
@@ -103,7 +105,8 @@ export function TopBar({ title }: { title: string }) {
           <span>Sep 2025 - Feb 2026</span>
         </div>
 
-        {/* Filters popover */}
+        {/* Filters popover - only shown when showFilters is true */}
+        {showFilters && (
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="outline" size="sm" className="gap-1.5 border-border bg-secondary text-foreground">
@@ -145,6 +148,7 @@ export function TopBar({ title }: { title: string }) {
             </div>
           </PopoverContent>
         </Popover>
+        )}
       </div>
     </header>
   )

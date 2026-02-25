@@ -55,7 +55,7 @@ export default function LearnersPage() {
 
   return (
     <>
-      <TopBar title="Learner Profiles" />
+      <TopBar title="Learner Profiles" showFilters />
       <div className="flex-1 overflow-y-auto p-6">
         <div className="flex flex-col gap-4">
           {/* Search */}
@@ -121,10 +121,10 @@ export default function LearnersPage() {
                       <tr
                         key={learner.id}
                         onClick={() => setSelectedId(learner.id)}
-                        className="cursor-pointer border-b border-border transition-colors hover:bg-accent/50"
+                        className="group cursor-pointer border-b border-border transition-colors hover:bg-accent/50"
                       >
                         <td className="px-4 py-3 font-medium text-foreground whitespace-nowrap">
-                          {learner.name}
+                          <span className="group-hover:underline">{learner.name}</span>
                         </td>
                         <td className="px-4 py-3 text-muted-foreground">{learner.ageRange}</td>
                         <td className="px-4 py-3 text-muted-foreground">{learner.employment}</td>
