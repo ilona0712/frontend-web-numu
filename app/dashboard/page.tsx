@@ -27,8 +27,8 @@ import {
 import { Users, Radio, CheckCircle2, MapPin, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const CHANNEL_COLORS = ["#3ecf8e", "#38bdf8", "#facc15", "#f97316", "#a78bfa"]
-const LINE_COLORS = ["#3ecf8e", "#38bdf8", "#facc15", "#f97316", "#a78bfa"]
+const CHANNEL_COLORS = ["#16835a", "#0c7eb5", "#c6940a", "#d45a07", "#7c5dc7"]
+const LINE_COLORS = ["#16835a", "#0c7eb5", "#c6940a", "#d45a07", "#7c5dc7"]
 
 function CustomTooltip({ active, payload, label }: { active?: boolean; payload?: Array<{ name: string; value: number; color: string }>; label?: string }) {
   if (!active || !payload) return null
@@ -115,17 +115,17 @@ export default function DisseminationPage() {
                   layout="vertical"
                   margin={{ left: 10, right: 20 }}
                 >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#232333" horizontal={false} />
-                  <XAxis type="number" tick={{ fill: "#71717a", fontSize: 11 }} axisLine={false} tickLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#d6d1c7" horizontal={false} />
+                  <XAxis type="number" tick={{ fill: "#6b6b6b", fontSize: 11 }} axisLine={false} tickLine={false} />
                   <YAxis
                     type="category"
                     dataKey="name"
-                    tick={{ fill: "#e8e8ed", fontSize: 11 }}
+                    tick={{ fill: "#1a1a1a", fontSize: 11 }}
                     width={120}
                     axisLine={false}
                     tickLine={false}
                   />
-                  <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(62,207,142,0.05)" }} />
+                  <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(22,131,90,0.06)" }} />
                   <Bar
                     dataKey="count"
                     radius={[0, 6, 6, 0]}
@@ -201,14 +201,14 @@ export default function DisseminationPage() {
             <h3 className="mb-4 text-sm font-semibold text-foreground">Registration Growth Over Time</h3>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={registrationGrowth} margin={{ left: 10, right: 20 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#232333" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#d6d1c7" />
                 <XAxis
                   dataKey="month"
-                  tick={{ fill: "#71717a", fontSize: 11 }}
+                  tick={{ fill: "#6b6b6b", fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                 />
-                <YAxis tick={{ fill: "#71717a", fontSize: 11 }} axisLine={false} tickLine={false} />
+                <YAxis tick={{ fill: "#6b6b6b", fontSize: 11 }} axisLine={false} tickLine={false} />
                 <Tooltip content={<CustomTooltip />} />
                 <Legend
                   wrapperStyle={{ fontSize: 11 }}

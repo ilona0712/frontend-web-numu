@@ -78,14 +78,14 @@ export function LearnerSlideOver({
                   className={cn(
                     "text-xs",
                     learner.provider === "Microsoft"
-                      ? "border-[#38bdf8]/30 bg-[#38bdf8]/10 text-[#38bdf8]"
-                      : "border-[#ef4444]/30 bg-[#ef4444]/10 text-[#ef4444]"
+                      ? "border-[#0c7eb5]/30 bg-[#0c7eb5]/10 text-[#0c7eb5]"
+                      : "border-[#dc2626]/30 bg-[#dc2626]/10 text-[#dc2626]"
                   )}
                 >
                   {learner.provider}
                 </Badge>
                 {learner.certificateEarned && (
-                  <div className="flex items-center gap-1 text-xs text-[#3ecf8e]">
+                  <div className="flex items-center gap-1 text-xs text-[#16835a]">
                     <Award className="h-3.5 w-3.5" />
                     Certificate Earned
                   </div>
@@ -102,9 +102,9 @@ export function LearnerSlideOver({
                 />
               </div>
               {learner.certificateEarned && (
-                <div className="mt-2 flex items-center gap-1.5 rounded-lg bg-[#3ecf8e]/10 px-3 py-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#3ecf8e]" />
-                  <span className="text-xs font-medium text-[#3ecf8e]">
+                <div className="mt-2 flex items-center gap-1.5 rounded-lg bg-[#16835a]/10 px-3 py-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#16835a]" />
+                  <span className="text-xs font-medium text-[#16835a]">
                     Certificate Verified
                   </span>
                 </div>

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" })
 
 export const viewport: Viewport = {
-  themeColor: '#0a0a0f',
+  themeColor: '#f5f2eb',
   userScalable: false,
 }
 

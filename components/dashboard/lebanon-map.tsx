@@ -14,11 +14,11 @@ type GeoData = {
 }
 
 function getColor(registrations: number, gap: boolean) {
-  if (gap) return "#ef4444"
-  if (registrations > 1000) return "#3ecf8e"
-  if (registrations > 500) return "#38bdf8"
-  if (registrations > 200) return "#facc15"
-  return "#f97316"
+  if (gap) return "#dc2626"
+  if (registrations > 1000) return "#16835a"
+  if (registrations > 500) return "#0c7eb5"
+  if (registrations > 200) return "#c6940a"
+  return "#d45a07"
 }
 
 function getRadius(registrations: number) {
@@ -46,11 +46,11 @@ export default function LebanonMap({ data }: { data: GeoData[] }) {
         center={[33.88, 35.75]}
         zoom={8}
         scrollWheelZoom={false}
-        style={{ height: "100%", width: "100%", background: "#0a0a0f" }}
+        style={{ height: "100%", width: "100%", background: "#f5f2eb" }}
         attributionControl={false}
       >
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://carto.com">CARTO</a>'
         />
         {data.map((d) => (

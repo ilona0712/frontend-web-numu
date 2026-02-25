@@ -33,8 +33,8 @@ export function KpiCard({
             className={cn(
               "flex items-center gap-0.5 rounded-md px-1.5 py-0.5 text-xs font-medium",
               change >= 0
-                ? "bg-[#3ecf8e]/10 text-[#3ecf8e]"
-                : "bg-[#ef4444]/10 text-[#ef4444]"
+                ? "bg-[#16835a]/10 text-[#16835a]"
+                : "bg-[#dc2626]/10 text-[#dc2626]"
             )}
           >
             {change >= 0 ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />}

@@ -63,11 +63,11 @@ export const channelBreakdown = [
 ]
 
 export const trackDistribution = [
-  { name: "AI Fundamentals", value: 33, color: "#3ecf8e" },
-  { name: "GenAI", value: 25, color: "#38bdf8" },
-  { name: "Data Ethics", value: 17, color: "#facc15" },
-  { name: "Automation", value: 14, color: "#f97316" },
-  { name: "Other", value: 11, color: "#a78bfa" },
+  { name: "AI Fundamentals", value: 33, color: "#16835a" },
+  { name: "GenAI", value: 25, color: "#0c7eb5" },
+  { name: "Data Ethics", value: 17, color: "#c6940a" },
+  { name: "Automation", value: 14, color: "#d45a07" },
+  { name: "Other", value: 11, color: "#7c5dc7" },
 ]
 
 export const registrationGrowth = [

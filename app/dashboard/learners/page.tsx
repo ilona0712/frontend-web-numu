@@ -43,11 +43,11 @@ export default function LearnersPage() {
   const statusColor = (status: string) => {
     switch (status) {
       case "completed":
-        return "bg-[#3ecf8e]/15 text-[#3ecf8e] border-[#3ecf8e]/30"
+        return "bg-[#16835a]/15 text-[#16835a] border-[#16835a]/30"
       case "draft":
-        return "bg-[#facc15]/15 text-[#facc15] border-[#facc15]/30"
+        return "bg-[#c6940a]/15 text-[#c6940a] border-[#c6940a]/30"
       case "invalid":
-        return "bg-[#ef4444]/15 text-[#ef4444] border-[#ef4444]/30"
+        return "bg-[#dc2626]/15 text-[#dc2626] border-[#dc2626]/30"
       default:
         return "bg-muted text-muted-foreground"
     }
@@ -147,8 +147,8 @@ export default function LearnersPage() {
                             className={cn(
                               "text-xs",
                               learner.provider === "Microsoft"
-                                ? "border-[#38bdf8]/30 bg-[#38bdf8]/10 text-[#38bdf8]"
-                                : "border-[#ef4444]/30 bg-[#ef4444]/10 text-[#ef4444]"
+                                ? "border-[#0c7eb5]/30 bg-[#0c7eb5]/10 text-[#0c7eb5]"
+                                : "border-[#dc2626]/30 bg-[#dc2626]/10 text-[#dc2626]"
                             )}
                           >
                             {learner.provider}

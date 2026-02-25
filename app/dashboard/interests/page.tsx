@@ -14,13 +14,13 @@ import {
 import { TopBar } from "@/components/dashboard/top-bar"
 import { motivationsData, challengesData, formatPreference } from "@/lib/mock-data"
 
-const MOTIVATION_COLORS = ["#3ecf8e", "#38bdf8", "#facc15", "#f97316"]
-const CHALLENGE_COLORS = ["#ef4444", "#f97316", "#facc15", "#38bdf8", "#a78bfa"]
+const MOTIVATION_COLORS = ["#16835a", "#0c7eb5", "#c6940a", "#d45a07"]
+const CHALLENGE_COLORS = ["#dc2626", "#d45a07", "#c6940a", "#0c7eb5", "#7c5dc7"]
 const FORMAT_COLORS = {
-  online_self_paced: "#3ecf8e",
-  live_online: "#38bdf8",
-  in_person: "#facc15",
-  hybrid: "#a78bfa",
+  online_self_paced: "#16835a",
+  live_online: "#0c7eb5",
+  in_person: "#c6940a",
+  hybrid: "#7c5dc7",
 }
 
 function CustomTooltip({ active, payload, label }: { active?: boolean; payload?: Array<{ name: string; value: number; color: string }>; label?: string }) {
@@ -50,20 +50,20 @@ export default function InterestsPage() {
             <h3 className="mb-4 text-sm font-semibold text-foreground">Learning Motivations</h3>
             <ResponsiveContainer width="100%" height={260}>
               <BarChart data={motivationsData} margin={{ left: 10, right: 20 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#232333" vertical={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#d6d1c7" vertical={false} />
                 <XAxis
                   dataKey="motivation"
-                  tick={{ fill: "#e8e8ed", fontSize: 11 }}
+                  tick={{ fill: "#1a1a1a", fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                 />
                 <YAxis
-                  tick={{ fill: "#71717a", fontSize: 11 }}
+                  tick={{ fill: "#6b6b6b", fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                   tickFormatter={(v) => `${v}%`}
                 />
-                <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(62,207,142,0.05)" }} />
+                <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(22,131,90,0.06)" }} />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                   {motivationsData.map((_, idx) => (
                     <Cell key={idx} fill={MOTIVATION_COLORS[idx]} />
@@ -79,10 +79,10 @@ export default function InterestsPage() {
               <h3 className="mb-4 text-sm font-semibold text-foreground">Top Challenges Reported</h3>
               <ResponsiveContainer width="100%" height={280}>
                 <BarChart data={challengesData} layout="vertical" margin={{ left: 10, right: 20 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#232333" horizontal={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#d6d1c7" horizontal={false} />
                   <XAxis
                     type="number"
-                    tick={{ fill: "#71717a", fontSize: 11 }}
+                    tick={{ fill: "#6b6b6b", fontSize: 11 }}
                     axisLine={false}
                     tickLine={false}
                     tickFormatter={(v) => `${v}%`}
@@ -90,12 +90,12 @@ export default function InterestsPage() {
                   <YAxis
                     type="category"
                     dataKey="challenge"
-                    tick={{ fill: "#e8e8ed", fontSize: 11 }}
+                    tick={{ fill: "#1a1a1a", fontSize: 11 }}
                     width={110}
                     axisLine={false}
                     tickLine={false}
                   />
-                  <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(62,207,142,0.05)" }} />
+                  <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(22,131,90,0.06)" }} />
                   <Bar dataKey="value" radius={[0, 6, 6, 0]}>
                     {challengesData.map((_, idx) => (
                       <Cell key={idx} fill={CHALLENGE_COLORS[idx]} />
@@ -110,20 +110,20 @@ export default function InterestsPage() {
               <h3 className="mb-4 text-sm font-semibold text-foreground">Learning Format Preference</h3>
               <ResponsiveContainer width="100%" height={280}>
                 <BarChart data={formatPreference} margin={{ left: 10, right: 20 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#232333" vertical={false} />
-                  <XAxis
+                <CartesianGrid strokeDasharray="3 3" stroke="#d6d1c7" vertical={false} />
+                <XAxis
                     dataKey="format"
-                    tick={{ fill: "#e8e8ed", fontSize: 11 }}
+                    tick={{ fill: "#1a1a1a", fontSize: 11 }}
                     axisLine={false}
                     tickLine={false}
                   />
                   <YAxis
-                    tick={{ fill: "#71717a", fontSize: 11 }}
+                    tick={{ fill: "#6b6b6b", fontSize: 11 }}
                     axisLine={false}
                     tickLine={false}
                     tickFormatter={(v) => `${v}%`}
                   />
-                  <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(62,207,142,0.05)" }} />
+                  <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(22,131,90,0.06)" }} />
                   <Legend
                     wrapperStyle={{ fontSize: 11 }}
                     formatter={(value: string) => (
