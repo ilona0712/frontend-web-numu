@@ -24,11 +24,12 @@ This dashboard was built during a 24-hour hackathon challenge to give **Ministry
 
 ##  Dashboard Preview
 
-![NUMŪ Dashboard — Dissemination Performance](./public/dashboard-preview.png)
+<img width="1366" height="1026" alt="screencapture-vm-n0l0n41vzq75ss9xn6h6i1-vusercontent-net-dashboard-2026-02-26-18_40_39" src="https://github.com/user-attachments/assets/0a98d4d2-63ae-4eae-86e1-b95098b6e54c" />
 
 > *Dissemination Performance view — 4,812 total registrations across 8 Lebanese regions, Sep 2025 – Feb 2026*
 
 ---
+
 
 ##  Features
 
