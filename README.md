@@ -118,7 +118,10 @@ pnpm start
 Built by a USJ student team at the **Code for Lebanon x USJ Hackathon**, February 26, 2026.
 
 - **Ilona Chamoun** — Frontend Development & Integration  
-- *[Add your teammates' names here]*
+- **Mia Hajjar** — Frontend Development
+- **Jerome Chaker** — Database
+- **Hady Souaiby** — Backend Development & APIs
+- **Ramy Badran** — Backend Development & APIs
 
 ---
 
